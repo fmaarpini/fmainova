@@ -206,31 +206,33 @@ body {
   .hero-mobile{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    aspect-ratio: 375/667; /* ajuste conforme o tamanho do banner mobile original */
-    min-height: 650px;
-    padding-top: 500px;
+    min-height: 100vh;
     background: url('imagens/banner_mobile.jpeg') no-repeat center top;
-    background-size: contain;
+    background-size: cover;
     text-align: center;
+    padding-top: 400px;
   }
   
   .hero-mobile .container{ 
     width: 100%; 
-    padding: 0; }
+    padding: 0; 
+    z-index: 2;
+  }
+
   .hero-mobile .btn-hero{ 
     margin: 20px auto 0; 
-    padding: 14px 28px; 
-    font-size: 20px; }
+    padding: 20px 36px; 
+    font-size: 27px; }
 }
 
 /* ajuste extra para telas muito pequenas (~4,7") */
 @media (max-width: 414px) {
   .hero-mobile {
-    min-height: calc(100vw * 0.55); /* aumenta altura proporcional */
-    padding-top: 15%;
+    min-height: 90vh; /* aumenta altura proporcional */
+    
   }
 
   .hero-mobile .btn-hero {
