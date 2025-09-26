@@ -209,10 +209,11 @@ body {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    aspect-ratio: 375/667; /* ajuste conforme o tamanho do banner mobile original */
     min-height: 650px;
     padding-top: 500px;
     background: url('imagens/banner_mobile.jpeg') no-repeat center top;
-    background-size: cover;
+    background-size: contain;
     text-align: center;
   }
   
@@ -220,9 +221,9 @@ body {
     width: 100%; 
     padding: 0; }
   .hero-mobile .btn-hero{ 
-    margin: 40px auto 0; 
-    padding: 16px 36px; 
-    font-size: 24px; }
+    margin: 20px auto 0; 
+    padding: 14px 28px; 
+    font-size: 20px; }
 }
 
 /* ajuste extra para telas muito pequenas (~4,7") */
