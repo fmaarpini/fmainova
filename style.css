@@ -210,7 +210,7 @@ body {
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    background: url('imagens/banner_mobile2.jpeg') no-repeat center top;
+    background: url('imagens/banner_mobile.jpeg') no-repeat center top;
     background-size: cover;
     text-align: center;
     padding-top: 400px;
@@ -899,6 +899,7 @@ body {
     font-size: 0.95rem;
   }
 }
+
 
 
 
