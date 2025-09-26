@@ -184,7 +184,7 @@ body {
   .menu-toggle {
     display: block !important;
     order: 2 !important;
-    font-size: 28px !important;
+    font-size: 36px !important;
     background: transparent !important;
     border: none !important;
     color: var(--white) !important;
