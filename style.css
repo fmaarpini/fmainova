@@ -168,6 +168,8 @@ body {
     align-items: center !important;
     gap: 0 !important;
     padding: 12px 16px !important;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   /* logo sempre à esquerda e maior */
@@ -189,6 +191,7 @@ body {
     border: none !important;
     color: var(--white) !important;
     cursor: pointer !important;
+    margin-right: 16px; /* distância da borda direita */
   }
 
   /* menu dropdown */
