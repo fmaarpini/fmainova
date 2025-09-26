@@ -142,20 +142,24 @@ body {
 .hero-desktop{
   position: relative;
   width: 100%;
-  height: 800px;
+  min-width: 1366px; /* garante funcionalidade em 14" */
+  height: 950px; /* altura do banner original */
   overflow: hidden;
   display: flex;
   justify-content: center;
-  padding-top: 400px;
   align-items: center;
   background: #000; /* fallback */
+  padding-top: 400px;
 }
 
 .hero-video{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+ position: absolute;
+  top: 0;
+  left: 50%;
+  width: auto; /* mantém proporção */
+  height: 100%; /* cobre altura do banner */
+  min-width: 1920px; /* evita distorção em monitores maiores */
+  transform: translateX(-50%);
   object-fit: cover;
   z-index: 1;
 }
@@ -174,11 +178,11 @@ body {
 .btn-hero{
   display: inline-block;
   margin-top: 24px;
-  padding: 20px 36px;
-  font-size: 25px;
+  padding: 16px 36px;
+  font-size: 20px;
   font-weight: 700;
-  color: var(--white);
-  background: var(--green-dark);
+  color: #fff;
+  background: #36b877;
   border-radius: 40px;
   text-decoration: none;
   transition: transform .2s, box-shadow .2s, background .2s;
@@ -187,7 +191,7 @@ body {
 .btn-hero:hover{
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  background: #1da851;
+  background: #25d366;
 }
 
 /* hero mobile (imagem) */
