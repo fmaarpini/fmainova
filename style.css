@@ -229,7 +229,7 @@ body {
 @media (max-width: 414px) {
   .hero-mobile {
     min-height: calc(100vw * 0.55); /* aumenta altura proporcional */
-    padding-top: 25%;
+    padding-top: 15%;
   }
 
   .hero-mobile .btn-hero {
