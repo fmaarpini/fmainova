@@ -209,15 +209,33 @@ body {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    min-height: 560px;
-    padding-top: 360px;
+    min-height: 650px;
+    padding-top: 500px;
     background: url('imagens/banner_mobile.jpeg') no-repeat center top;
     background-size: cover;
     text-align: center;
   }
   
-  .hero-mobile .container{ width: 100%; padding: 0; }
-  .hero-mobile .btn-hero{ margin: 40px auto 0; padding: 16px 36px; font-size: 24px; }
+  .hero-mobile .container{ 
+    width: 100%; 
+    padding: 0; }
+  .hero-mobile .btn-hero{ 
+    margin: 40px auto 0; 
+    padding: 16px 36px; 
+    font-size: 24px; }
+}
+
+/* ajuste extra para telas muito pequenas (~4,7") */
+@media (max-width: 414px) {
+  .hero-mobile {
+    min-height: calc(100vw * 0.55); /* aumenta altura proporcional */
+    padding-top: 25%;
+  }
+
+  .hero-mobile .btn-hero {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
 }
 
 /* =========================
