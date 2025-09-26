@@ -137,6 +137,89 @@ body {
 }
 
 /* =========================
+   NAVBAR DESKTOP
+========================= */
+.navbar .container {
+  display: flex;
+  justify-content: space-between; /* logo à esquerda, links à direita */
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-toggle {
+  display: none; /* só aparece no mobile */
+}
+
+/* =========================
+   NAVBAR MOBILE AJUSTADA
+========================= */
+@media (max-width: 768px) {
+
+  /* container da navbar: logo à esquerda, hambúrguer à direita */
+  .navbar .container {
+    display: flex !important;        
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 0 !important;
+    padding: 12px 16px !important;
+  }
+
+  /* logo sempre à esquerda e maior */
+  .logo {
+    order: 1 !important;
+  }
+
+  .logo-img {
+    height: 70px !important; /* aumente aqui para tamanho desejado */
+    width: auto !important;
+  }
+
+  /* menu-toggle (hambúrguer) sempre à direita */
+  .menu-toggle {
+    display: block !important;
+    order: 2 !important;
+    font-size: 28px !important;
+    background: transparent !important;
+    border: none !important;
+    color: var(--white) !important;
+    cursor: pointer !important;
+  }
+
+  /* menu dropdown */
+  .nav-links {
+    position: absolute !important;
+    top: 64px !important;
+    right: 16px !important;
+    background: var(--navy) !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    padding: 16px !important;
+    border-radius: 10px !important;
+    display: none !important;
+    min-width: 180px !important;
+    z-index: 999 !important;
+  }
+
+  .nav-links.show {
+    display: flex !important;
+  }
+
+  /* links alinhados à esquerda dentro do menu */
+  .nav-links a {
+    text-align: left !important;
+    width: 100% !important;
+  }
+}
+
+
+
+/* =========================
    HERO (desktop + mobile)
    ========================= */
 .hero-desktop{
@@ -899,7 +982,6 @@ body {
     font-size: 0.95rem;
   }
 }
-
 
 
 
