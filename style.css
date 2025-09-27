@@ -224,7 +224,7 @@ body {
 @media (max-width: 414px) {
   .navbar .menu-toggle {
     margin-right: 30px !important;  /* afasta mais o hambúrguer da borda direita */
-    font-size: 30px !important;     /* reduz um pouco para não cortar */
+    font-size: px !important;     /* reduz um pouco para não cortar */
   }
 
   .logo-img {
@@ -340,8 +340,8 @@ body {
   }
 
   .hero-mobile .btn-hero {
-    font-size: 16px;
-    padding: 12px 24px;
+    font-size: 27px;
+    padding: 20px 28px;
   }
 }
 
