@@ -168,8 +168,6 @@ body {
     align-items: center !important;
     gap: 0 !important;
     padding: 12px 16px !important;
-    padding-left: 16px;
-    padding-right: 16px;
   }
 
   /* logo sempre à esquerda e maior */
@@ -191,7 +189,7 @@ body {
     border: none !important;
     color: var(--white) !important;
     cursor: pointer !important;
-    margin-right: 16px; /* distância da borda direita */
+    margin-right: 16px; /* distância padrão da borda direita */
   }
 
   /* menu dropdown */
@@ -219,6 +217,26 @@ body {
     width: 100% !important;
   }
 }
+
+/* =========================
+   AJUSTE EXTRA PARA TELAS PEQUENAS (~4.7")
+========================= */
+@media (max-width: 414px) {
+  .navbar .menu-toggle {
+    margin-right: 30px !important;  /* afasta mais o hambúrguer da borda direita */
+    font-size: 30px !important;     /* reduz um pouco para não cortar */
+  }
+
+  .logo-img {
+    height: 70px !important;        /* logo um pouco maior */
+  }
+
+  .navbar .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important; /* mantém equilíbrio */
+  }
+}
+
 
 
 
