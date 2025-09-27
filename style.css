@@ -788,6 +788,15 @@ body {
   outline: none;
 }
 
+.form-contact select {
+  padding: 12px 14px;
+  border: 1px solid #d0d6db;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #fff;
+  color: var(--navy);
+}
+
 .btn-contact{
   padding: 14px 32px;
   background: var(--green);
