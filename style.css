@@ -789,61 +789,85 @@ body {
 }
 
 /* =========================
-   Estilo para o select do formulário
+   Formulário uniforme (desktop e mobile)
 ========================= */
-.form-contact select {
+.form-contact select,
+.form-contact input,
+.form-contact textarea {
+  width: 100%;
   padding: 12px 14px;
   border: 1px solid #d0d6db;
   border-radius: 8px;
   font-size: 15px;
-  background: #fff;
   color: var(--navy);
-  appearance: none;       /* remove seta nativa */
+  background: #fff;
+  transition: border-color .15s;
+  box-sizing: border-box;
+}
+
+/* foco */
+.form-contact select:focus,
+.form-contact input:focus,
+.form-contact textarea:focus {
+  border-color: var(--green);
+  outline: none;
+}
+
+/* remove estilo nativo do select */
+.form-contact select {
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   cursor: pointer;
-}
-
-/* Adicionar seta personalizada */
-.form-contact select {
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D'12'%20height%3D'7'%20viewBox%3D'0%200%2012%207'%20fill%3D'none'%20xmlns%3D'http://www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M1%201L6%206L11%201'%20stroke%3D'%238f979b'%20stroke-width%3D'2'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 12px center;
   background-size: 12px 7px;
 }
 
-/* Ajuste para mobile */
-@media (max-width: 768px) {
-  .form-contact select {
-    font-size: 15px;
-    padding: 12px 14px;
-  }
+/* label */
+.form-contact label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+  display: block;
 }
 
-.btn-contact{
+/* botão */
+.btn-contact {
   padding: 14px 32px;
   background: var(--green);
   color: #fff;
   border-radius: 40px;
   font-size: 16px;
   font-weight: 700;
-  text-decoration: none;
   border: none;
   cursor: pointer;
   transition: background .2s, transform .15s;
   display: inline-block;
   text-align: center;
+  margin-top: 10px;
 }
 
-.btn-contact:hover{
+.btn-contact:hover {
   background: var(--green-dark);
   transform: translateY(-2px);
 }
 
-/* mobile form */
-@media (max-width: 768px){
-  .form-contact{ padding: 0 8px; }
-  .btn-contact{ width: 100%; padding: 14px 0; }
+/* mobile ajustes */
+@media (max-width: 768px) {
+  .form-contact select,
+  .form-contact input,
+  .form-contact textarea {
+    font-size: 15px;
+    padding: 12px 14px;
+  }
+
+  .btn-contact {
+    width: 100%;
+    padding: 14px 0;
+  }
 }
 
 /* =========================
