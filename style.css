@@ -252,7 +252,7 @@ body {
 ========================= */
 @media (max-width: 414px) {
   .navbar .menu-toggle {
-    margin-right: 40px !important;  /* afasta mais o hambúrguer da borda direita */
+    margin-right: 50px !important;  /* afasta mais o hambúrguer da borda direita */
     font-size: 34px !important;     /* tamanho ajustado para não cortar */
   }
 
