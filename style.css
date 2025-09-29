@@ -252,17 +252,18 @@ body {
 ========================= */
 @media (max-width: 414px) {
   .navbar .menu-toggle {
-    margin-right: 30px !important;  /* afasta mais o hambúrguer da borda direita */
-    font-size: px !important;     /* reduz um pouco para não cortar */
+    margin-right: 20px !important;  /* afasta mais o hambúrguer da borda direita */
+    font-size: 34px !important;     /* tamanho ajustado para não cortar */
   }
 
   .logo-img {
-    height: 70px !important;        /* logo um pouco maior */
+    height: 65px !important;        /* logo ajustado */
+    width: auto !important;
   }
 
   .navbar .container {
     padding-left: 16px !important;
-    padding-right: 16px !important; /* mantém equilíbrio */
+    padding-right: 16px !important; /* equilíbrio lateral */
   }
 }
 
