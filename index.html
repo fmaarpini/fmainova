@@ -74,12 +74,17 @@
     </div>
   </header>
 
+
+
  <!-- HERO Desktop com vídeo -->
 <section class="hero hero-desktop">
   <!-- Vídeo de fundo -->
   <video class="hero-video" autoplay muted loop playsinline>
     <source src="imagens/banner.mp4" type="video/mp4">
   </video>
+
+   <!-- Camada de partículas -->
+  <div id="particles-js"></div>
 
   <!-- Conteúdo sobre o vídeo -->
   <div class="container">
@@ -88,12 +93,61 @@
 </section>
 
 
+<!-- Script do particles.js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- Configuração das partículas -->
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": { "value": "#25d366" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.5 },
+    "size": { "value": 3, "random": true },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 3,
+      "out_mode": "out"
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": { "enable": true, "mode": "grab" },
+      "onclick": { "enable": true, "mode": "push" },
+      "resize": true
+    },
+    "modes": {
+      "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
+      "push": { "particles_nb": 4 }
+    }
+  },
+  "retina_detect": true
+});
+</script>
+
+
 <!-- HERO Mobile -->
 <section class="hero hero-mobile">
   <div class="container">
     <a href="#contato" class="btn-hero">Fale Conosco</a>
   </div>
 </section>
+
   
 
   <!-- SERVIÇOS -->
@@ -397,6 +451,11 @@ window.addEventListener('load', function() {
     });
   });
 </script>
+
+
+
+
+
 
 </body>
 </html>
