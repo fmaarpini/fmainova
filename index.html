@@ -142,6 +142,230 @@ particlesJS("particles-js", {
 </script>
 
 
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--navy);
+      background: var(--bg);
+      -webkit-overflow-scrolling: touch;
+      padding-top: 90px; /* evita sobreposição do conteúdo pela navbar fixa */
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* NAV */
+    .navbar {
+      background: var(--navy);
+      color: var(--white);
+      padding: 12px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 80px 20px 40px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+      font-size: 1.1rem;
+      color: #13305a;
+    }
+
+    .cta {
+      display: inline-block;
+      background: #0a2540;
+      color: #25d366;
+      padding: 14px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    /* CONTATO */
+    .contact {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .contact .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      color: #0a2540;
+    }
+
+    .contact p {
+      margin-bottom: 20px;
+      color: #13305a;
+    }
+
+    .form-contact {
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      gap: 16px;
+    }
+
+    .form-group {
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #0a2540;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .btn-contact {
+      background: #25d366;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .btn-contact:hover {
+      background: #1da955;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 25px 0;
+      margin-top: 60px;
+      background: #0a2540;
+      color: #ffffff;
+      text-align: center;
+      border-top: 2px solid #25d366;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    footer .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* WHATSAPP FIXO */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      padding: 12px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 50;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      .nav-links.show {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background: var(--blue);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+
+
 <!-- HERO Mobile -->
 <section class="hero hero-mobile">
   <div class="container">
@@ -344,11 +568,12 @@ particlesJS("particles-js", {
   </div>
 </section>
 
-     <!-- FALE CONOSCO -->
-<section id="contato" class="contact">
+<!-- FALE CONOSCO -->
+<section id="contato" class="contact contact-portfolio">
   <div class="container">
     <h2 class="section-title">Fale Conosco</h2>
     <p>Preencha o formulário abaixo e entraremos em contato o mais rápido possível.</p>
+    
     <form class="form-contact">
       
       <div class="form-group">
@@ -376,7 +601,7 @@ particlesJS("particles-js", {
         <textarea id="message" name="message" rows="6" placeholder="Escreva sua mensagem..." required></textarea>
       </div>
 
-      <button type="submit" class="btn-contact">Enviar Mensagem</button>
+      <button type="submit" class="btn-contact btn-portfolio">Enviar Mensagem</button>
 
     </form>
   </div>
