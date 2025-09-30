@@ -38,59 +38,60 @@
 
     html, body {
       height: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     body {
       font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-  line-height: 1.6;
-  color: var(--navy);
-  background: var(--bg);
-  -webkit-overflow-scrolling: touch;
-  padding-top: 90px; /* evita sobreposição do conteúdo pela navbar fixa */
-}
+      line-height: 1.6;
+      color: var(--navy);
+      background: var(--bg);
+      -webkit-overflow-scrolling: touch;
+      padding-top: 90px; /* evita sobreposição do conteúdo pela navbar fixa */
+    }
+
     .container {
       width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
     }
 
     /* NAV */
     .navbar {
-       background: var(--navy);
-  color: var(--white);
-  padding: 12px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      background: var(--navy);
+      color: var(--white);
+      padding: 12px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
     .navbar .container {
       display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
     }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
     .logo-img {
       height: 60px;
-  width: auto;
-  display: block;
+      width: auto;
+      display: block;
     }
 
     nav ul {
@@ -130,25 +131,91 @@
 
     .cta {
       display: inline-block;
-      background: #1fb6ff;
-      color: white;
+      background: #0a2540;
+      color: #25d366;
       padding: 14px 24px;
       border-radius: 12px;
       text-decoration: none;
       font-weight: 700;
     }
 
-    /* FOOTER */
-    footer {
-      padding: 30px 0;
-      margin-top: 186px;
-      background: #0a2540;
-      color: #bcd5ff;
+    /* CONTATO */
+    .contact {
+      padding: 60px 20px;
       text-align: center;
-      border-top: 2px solid var(--green-dark);
     }
 
-    
+    .contact .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      color: #0a2540;
+    }
+
+    .contact p {
+      margin-bottom: 20px;
+      color: #13305a;
+    }
+
+    .form-contact {
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      gap: 16px;
+    }
+
+    .form-group {
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #0a2540;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .btn-contact {
+      background: #25d366;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .btn-contact:hover {
+      background: #1da955;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 25px 0;
+      margin-top: 186px;
+      background: #0a2540;
+      color: #ffffff;
+      text-align: center;
+      border-top: 2px solid #25d366;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    footer .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
 
     /* WHATSAPP FIXO */
     .whatsapp-btn {
@@ -197,8 +264,6 @@
         </a>
       </div>
 
-      
-
       <!-- Botão Hamburguer -->
       <div class="menu-toggle" id="menu-toggle">☰</div>
 
@@ -207,25 +272,25 @@
         <ul class="nav-links" id="nav-links">
           <li><a href="index.html" class="nav-item">HOME</a></li>
           <li><a href="index.html#sobre" class="nav-item">SOBRE</a></li>
-          <li><a href="#servicos" class="nav-item">SERVIÇOS</a></li>
+          <li><a href="index.html#servicos" class="nav-item">SERVIÇOS</a></li>
           <li><a href="portfolio.html" class="nav-item nav-link">PORTFÓLIO</a></li>
-          <li><a href="#contato" class="nav-item btn">CONTATO</a></li>
+          <li><a href="index.html#contato" class="nav-item btn">CONTATO</a></li>
           <li>
             <a href="https://www.instagram.com/fellipearpini/" target="_blank" class="nav-item instagram-link" aria-label="Instagram">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
-    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 
-    5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 
-    16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 
-    1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 
-    4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 
-    0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 
-    16.25 3.5h-8.5Zm8 1.75a.75.75 0 1 1 
-    0 1.5.75.75 0 0 1 0-1.5ZM12 
-    7a5 5 0 1 1 0 10 5 5 0 0 
-    1 0-10Zm0 1.5a3.5 3.5 0 1 0 
-    0 7 3.5 3.5 0 0 0 0-7Z"/>
-  </svg>
-</a>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
+                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 
+                5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 
+                16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 
+                1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 
+                4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 
+                0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 
+                16.25 3.5h-8.5Zm8 1.75a.75.75 0 1 1 
+                0 1.5.75.75 0 0 1 0-1.5ZM12 
+                7a5 5 0 1 1 0 10 5 5 0 0 
+                1 0-10Zm0 1.5a3.5 3.5 0 1 0 
+                0 7 3.5 3.5 0 0 0 0-7Z"/>
+              </svg>
+            </a>
           </li>
         </ul>
       </nav>
@@ -240,17 +305,49 @@
       <a class="cta" href="#contato">🚀 Vamos conversar</a>
     </section>
 
-    <!-- CONTATO -->
-    <section id="contato" style="margin:40px 0;text-align:center">
-      <h2>Entre em contato</h2>
-      <p>Pronto para transformar sua ideia em realidade? Fale conosco!</p>
-      <a class="cta" href="mailto:contato@fmainova.com.br">contato@fmainova.com.br</a>
+    <!-- FALE CONOSCO -->
+    <section id="contato" class="contact">
+      <div class="container">
+        <h2 class="section-title">Fale Conosco</h2>
+        <p>Preencha o formulário abaixo e entraremos em contato o mais rápido possível.</p>
+        <form class="form-contact">
+          
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Assunto</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>Selecione o assunto</option>
+              <option value="orcamento">Orçamento</option>
+              <option value="duvida">Dúvida</option>
+              <option value="suporte">Suporte</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="6" placeholder="Escreva sua mensagem..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-contact">Enviar Mensagem</button>
+        </form>
+      </div>
     </section>
   </main>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2025 FMAInova - Todos os direitos reservados.</p>
+    <div class="container">
+      <p>© 2025 FMAInova - Todos os direitos reservados.</p>
+    </div>
   </footer>
 
   <!-- WHATSAPP FIXO -->
@@ -284,6 +381,5 @@
       navLinks.classList.toggle('show');
     });
   </script>
-
 </body>
 </html>
