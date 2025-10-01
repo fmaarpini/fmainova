@@ -366,7 +366,7 @@ body {
   }
 
   .hero-mobile .btn-hero{ 
-    margin: 20px auto 0; 
+    margin: 290px auto 0; 
     padding: 20px 36px; 
     font-size: 27px; }
 }
@@ -1119,3 +1119,6 @@ body {
   transition: transform 0.2s ease, opacity 0.3s ease;
   opacity: 0.8;
 }
+
+
+
