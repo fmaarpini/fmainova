@@ -1120,5 +1120,62 @@ body {
   opacity: 0.8;
 }
 
+/* QUADRO ACIMA DO FOOTER */
+.pre-footer {
+  background: #0a2540;
+  color: #fff;
+  padding: 40px 20px;
+  border-top: 3px solid #25d366;
+}
 
+.pre-footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  align-items: flex-start;
+}
 
+.footer-col h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #25d366;
+}
+
+.footer-col p,
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #25d366;
+}
+
+.footer-logo {
+  max-width: 350px;
+  display: block;       /* faz a logo se comportar como bloco */
+  margin: 0 auto;       /* centraliza horizontalmente */
+}
+
+.footer {
+  text-align: center;   /* centraliza qualquer coisa dentro */
+}
+
+@media (max-width: 768px) {
+  .footer-logo {
+    max-width: 250px;   /* menor para celular */
+    display: block;
+    margin: 0 auto;
+  }
+}
