@@ -1120,12 +1120,21 @@ body {
   opacity: 0.8;
 }
 
+/* Reset básico */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
 /* QUADRO ACIMA DO FOOTER */
 .pre-footer {
   background: #0a2540;
   color: #fff;
-  padding: 40px 20px;
+  padding: 20px 20px 10px 20px; /* menor padding para aproximar do footer */
   border-top: 3px solid #25d366;
+  margin-bottom: 0; 
 }
 
 .pre-footer-container {
@@ -1135,6 +1144,7 @@ body {
   align-items: flex-start;
 }
 
+/* Colunas */
 .footer-col h3 {
   font-size: 1.2rem;
   margin-bottom: 15px;
@@ -1162,20 +1172,30 @@ body {
   color: #25d366;
 }
 
+/* Logo */
 .footer-logo {
   max-width: 350px;
-  display: block;       /* faz a logo se comportar como bloco */
-  margin: 0 auto;       /* centraliza horizontalmente */
+  display: block;
+  margin: 0 auto;
 }
 
+/* Footer */
 .footer {
-  text-align: center;   /* centraliza qualquer coisa dentro */
+  background: #0a2540;
+  color: #fff;
+  text-align: center;
+  margin: 0; /* remove qualquer espaço acima */
+  padding: 15px 20px; /* mantém espaçamento interno */
+  border-top: 3px solid #25d366;
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .footer-logo {
-    max-width: 250px;   /* menor para celular */
+    max-width: 250px;
     display: block;
     margin: 0 auto;
   }
 }
+
+
