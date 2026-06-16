@@ -276,7 +276,6 @@ body {
 .hero-desktop{
   position: relative;
   width: 100%;
-  min-width: 1366px;
   height: auto;
   aspect-ratio: 1920/950;
   overflow: hidden;
@@ -289,13 +288,13 @@ body {
 
 .hero-banner{
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 0%;
+  left: 0%;
   width: 100%;
-  height: auto;
-  max-height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
+  height: 100%;
+  transform: none;
+  object-fit: contain;
+  object-position: center top;
   z-index: 1;
 }
 
@@ -365,19 +364,26 @@ body {
 }
 
 @media (max-width: 768px){
-  .hero-desktop{ display: none; }
-  .hero-mobile{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    background: url('imagens/banner_mobile.png') no-repeat center top;
-    background-size: cover;
-    text-align: center;
-    padding-top: 400px;
+  .hero-desktop{ 
+    display: none; 
   }
+  .hero-mobile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 530px;
+
+  background: url('imagens/banner_mobile.png') no-repeat center top;
+
+  background-size: 100% auto;
+  background-color: #031b3a;
+
+  text-align: center;
+  padding-top: 0;
+}
   
   .hero-mobile .container{ 
     width: 100%; 
@@ -1217,5 +1223,6 @@ html, body {
     margin: 0 auto;
   }
 }
+
 
 
