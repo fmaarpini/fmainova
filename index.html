@@ -77,17 +77,20 @@
 
 
 
-<!-- HERO Desktop com Banner -->
+ <!-- HERO Desktop com vídeo -->
 <section class="hero hero-desktop">
+  <!-- Vídeo de fundo -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="imagens/banner.mp4" type="video/mp4">
+  </video>
 
-  <img src="imagens/banner.png" alt="Banner Principal" class="hero-banner">
-
+   <!-- Camada de partículas -->
   <div id="particles-js"></div>
 
+  <!-- Conteúdo sobre o vídeo -->
   <div class="container">
     <a href="#contato" class="btn-hero">Fale Conosco</a>
   </div>
-
 </section>
 
 
@@ -385,6 +388,33 @@ particlesJS("particles-js", {
 
   <div class="cards-column">
 
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon">
+          <!-- SVG Navegador -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 150 160">
+            <rect x="14" y="18" width="122" height="74" rx="6" fill="none" stroke="#0a2540" stroke-width="3"/>
+            <circle cx="28" cy="30" r="3" fill="#25d366"/>
+            <circle cx="40" cy="30" r="3" fill="#0a2540"/>
+            <rect x="26" y="44" width="98" height="18" rx="3" fill="#25d366" opacity="0.12"/>
+            <path d="M28 74 h94 v18 h-94 z" fill="#25d366" opacity="0.08" stroke="#0a2540" stroke-width="1"/>
+            <rect x="30" y="46" width="40" height="14" rx="2" fill="#25d366" />
+            <rect x="74" y="46" width="40" height="14" rx="2" fill="none" stroke="#0a2540" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="title">Web Design</div>
+      </div>
+      <div class="items">
+        <p>Transforme sua presença digital com <span style="color:#25d366;"><strong>websites profissionais</strong></span> desenvolvidos para destacar sua marca e gerar resultados. Cada projeto é planejado com foco em <strong>design moderno</strong>, <strong>experiência do usuário</strong>, <strong>responsividade</strong> e <strong>alta performance</strong>, garantindo uma navegação fluida em <strong>computadores</strong>, <strong>tablets</strong> e <strong>smartphones</strong>.</p>
+        <p>Criamos <strong>layouts personalizados</strong>, visualmente atraentes e alinhados à <strong>identidade visual</strong> da sua empresa, proporcionando mais <strong>credibilidade</strong> e fortalecendo sua <strong>presença online</strong>.</p>
+        <p>Além disso, aplicamos boas práticas de <strong>SEO</strong>, <strong>otimização de velocidade</strong> e <strong>usabilidade</strong>, desenvolvendo <strong>sites funcionais</strong>, <strong>seguros</strong> e preparados para atrair <strong>novos clientes</strong>, gerar <strong>oportunidades de negócio</strong> e impulsionar o crescimento da sua <strong>marca</strong>.</p>
+      </div>
+      <div class="card-cta">
+        <a href="#contato" class="btn">Saiba Mais</a>
+      </div>
+    </div>
+
     <!-- Card 1 -->
     <div class="card">
       <div class="card-head">
@@ -438,34 +468,7 @@ particlesJS("particles-js", {
       </div>
     </div>
 
-    <!-- Card 3 -->
-    <div class="card">
-      <div class="card-head">
-        <div class="card-icon">
-          <!-- SVG Navegador -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 150 160">
-            <rect x="14" y="18" width="122" height="74" rx="6" fill="none" stroke="#0a2540" stroke-width="3"/>
-            <circle cx="28" cy="30" r="3" fill="#25d366"/>
-            <circle cx="40" cy="30" r="3" fill="#0a2540"/>
-            <rect x="26" y="44" width="98" height="18" rx="3" fill="#25d366" opacity="0.12"/>
-            <path d="M28 74 h94 v18 h-94 z" fill="#25d366" opacity="0.08" stroke="#0a2540" stroke-width="1"/>
-            <rect x="30" y="46" width="40" height="14" rx="2" fill="#25d366" />
-            <rect x="74" y="46" width="40" height="14" rx="2" fill="none" stroke="#0a2540" stroke-width="2"/>
-          </svg>
-        </div>
-        <div class="title">Landing Page</div>
-      </div>
-      <div class="items">
-        <p>Transforme sua presença online com nossas <strong>Landing Pages</strong> criadas para gerar resultados. Cada página é desenvolvida com foco em <strong>modernidade</strong>, <strong>responsividade</strong> e <strong>conversão</strong>, garantindo que seus visitantes tenham uma experiência excepcional.</p>
-        <p>Oferecemos <strong>design atrativo</strong>, <strong>navegação intuitiva</strong> e <strong>carregamento rápido</strong>, elementos essenciais para captar <strong>leads qualificados</strong> e aumentar suas <strong>vendas</strong>.</p>
-        <p>Além disso, aplicamos técnicas avançadas de <strong>SEO</strong> e integração com ferramentas de <strong>marketing digital</strong>, tornando sua página não apenas bonita, mas altamente funcional e estratégica.</p>
-      </div>
-      <div class="card-cta">
-        <a href="#contato" class="btn">Saiba Mais</a>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
+        <!-- Card 4 -->
     <div class="card">
       <div class="card-head">
         <div class="card-icon">
@@ -605,14 +608,14 @@ particlesJS("particles-js", {
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#25d366" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:8px;">
           <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.551 4.168 1.595 5.975L.057 24l6.207-1.497A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.817 0-3.588-.477-5.137-1.378l-.368-.214-3.684.889.786-3.598-.24-.374A9.732 9.732 0 012.25 12c0-5.383 4.367-9.75 9.75-9.75S21.75 6.617 21.75 12 17.383 21.75 12 21.75zm5.168-7.553c-.283-.141-1.674-.827-1.933-.921-.259-.096-.447-.141-.636.142s-.73.921-.895 1.11c-.165.188-.33.212-.613.07-.283-.141-1.195-.44-2.276-1.402-.841-.75-1.41-1.676-1.576-1.959-.165-.283-.018-.437.124-.578.127-.127.283-.33.424-.495.142-.165.189-.283.283-.472.094-.188.047-.353-.024-.495-.07-.141-.636-1.533-.872-2.096-.23-.554-.465-.479-.636-.488-.165-.008-.353-.01-.542-.01-.188 0-.495.071-.754.354-.259.283-.99.967-.99 2.359 0 1.391 1.012 2.731 1.154 2.919.142.188 1.993 3.037 4.827 4.257.676.292 1.204.467 1.616.598.678.216 1.294.185 1.781.112.543-.081 1.674-.683 1.91-1.34.236-.657.236-1.22.165-1.34-.07-.118-.259-.188-.542-.329z"/>
         </svg>
-        WhatsApp: (27) 99951-3700
+        WhatsApp: (11) 99999-9999
       </p>
       <p>
         <!-- Ícone Email -->
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#25d366" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:8px;">
           <path d="M12 13.065l-11.2-6.965h22.4l-11.2 6.965zm0 2.602l-12-7.465v12.798h24v-12.798l-12 7.465z"/>
         </svg>
-        fellipearpini@hotmail.com
+        contato@fmainova.com
       </p>
     </div>
 
@@ -635,7 +638,7 @@ particlesJS("particles-js", {
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#25d366" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:8px;">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/>
         </svg>
-        Av.Getulio Vargas, 20 - Colatina/ES
+        Rua Exemplo, 123 - São Paulo/SP
       </p>
       <p>
         <!-- Ícone mundo -->
@@ -657,11 +660,11 @@ particlesJS("particles-js", {
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p>© 2026 FMAInova - Todos os direitos reservados.</p>
+  <p>© 2025 FMAInova - Todos os direitos reservados.</p>
 </footer>
 
   <!-- WHATSAPP FIXO -->
-  <a href="https://wa.me/5527999513700" class="whatsapp-btn" target="_blank" aria-label="Fale conosco no WhatsApp">
+  <a href="https://wa.me/5527999999999" class="whatsapp-btn" target="_blank" aria-label="Fale conosco no WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#ffffff">
       <path d="M20.52 3.48A11.924 11.924 0 0012 
       0C5.37 0 0 5.37 0 12c0 2.11.55 4.09 
