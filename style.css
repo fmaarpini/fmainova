@@ -337,6 +337,26 @@ body {
   background: #25d366;
 }
 
+/* botao hero */
+.btn-hero{
+  display: inline-block;
+  margin-top: 24px;
+  padding: 20px 36px;
+  font-size: 25px;
+  font-weight: 800;
+  color: #fff;
+  background: #25d366;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s, background .2s;
+}
+
+.btn-hero:hover{
+   transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  background: #25d366;
+}
+
 
 
 /* hero mobile (imagem) */
