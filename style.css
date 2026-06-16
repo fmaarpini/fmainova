@@ -370,19 +370,19 @@ body {
   .hero-mobile{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 
   width: 100%;
-  min-height: 530px;
+  
 
   background: url('imagens/banner_mobile.png') no-repeat center top;
 
   background-size: 100% auto;
-  background-color: #031b3a;
-
+   min-height: 530px;
   text-align: center;
   padding-top: 0;
+  background-color: #031b3a;
 }
   
   .hero-mobile .container{ 
