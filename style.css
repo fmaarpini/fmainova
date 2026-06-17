@@ -377,13 +377,14 @@ body {
   
 
   background: url('imagens/banner_mobile.png') no-repeat center top;
-  background-size: 100% auto;
+  background-size: contain;
+  aspect-ratio: 640 / 950;
 
-  min-height: 950px;
+  
 
   text-align: center;
   padding-top: 0;
-  background-color: #031b3a;
+  background-color: transparent;
 }
   
   .hero-mobile .container{ 
@@ -400,10 +401,7 @@ body {
 
 /* ajuste extra para telas muito pequenas (~4,7") */
 @media (max-width: 414px) {
-  .hero-mobile {
-    min-height: 90vh; /* aumenta altura proporcional */
-    
-  }
+  
 
   .hero-mobile .btn-hero {
     font-size: 27px;
