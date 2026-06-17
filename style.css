@@ -377,11 +377,12 @@ body {
   
 
   background: url('imagens/banner_mobile.png') no-repeat center top;
+  background-size: 100% auto;
 
-  background-size: cover;
-  min-height: 100vh;
+  min-height: 950px;
+
   text-align: center;
-  padding-top: 90px;
+  padding-top: 0;
   background-color: #031b3a;
 }
   
