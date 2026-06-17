@@ -379,9 +379,9 @@ body {
   background: url('imagens/banner_mobile.png') no-repeat center top;
 
   background-size: 100% auto;
-   min-height: 530px;
+   min-height: 710px;
   text-align: center;
-  padding-top: 0;
+  padding-top: 90px;
   background-color: #031b3a;
 }
   
