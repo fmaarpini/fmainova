@@ -487,9 +487,8 @@ body {
 .items{
   display:flex;
   flex-direction:column;
-  gap:14px;
+  gap:10px;
   margin-top:6px;
-  flex:1;
 }
 
 .item{
@@ -523,9 +522,9 @@ body {
 
 /* CTA no card */
 .card-cta{
-  margin-top:12px;
-  display:flex;
-  justify-content:center;
+    margin-top:4px;
+    display:flex;
+    justify-content:center;
 }
 
 .btn{
@@ -1070,7 +1069,7 @@ body {
   color: #333;
   line-height: 1.3;
   margin: 0; /* remove espaço embaixo */
-  margin-bottom: 8px;
+  margin-bottom: 2px;
 }
 
 /* Botão */
