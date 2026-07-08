@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FMAInova - Tecnologia e Inovação</title>
+  <meta name="description" content="FMAInova - Soluções em tecnologia, inovação e consultoria para empresas que desejam crescer com eficiência.">
+  <meta name="keywords" content="suporte técnico, informática, tecnologia, acesso remoto, formatação de computador, instalação de software, landing page, manutenção de computadores, suporte empresarial, FMAInova">
+  <meta name="author" content="FMAInova">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://fmaarpini.github.io/fmainova/">
+  <!-- Favicons e PWA -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+
+  <!-- Apple iOS -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-touch-icon-120x120.png">
+
+  <!-- Android / PWA -->
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <meta name="theme-color" content="#102041">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#102041">
+
+  <!-- Microsoft -->
+  <meta name="msapplication-TileColor" content="#102041">
+  <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+ <!-- 👇 AQUI É O LOCAL CORRETO -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding-top: 90px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90px;
+      background: #0a2540;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 60vh;
+      overflow: hidden;
+    }
+
+    .hero-banner {
+      width: 100%;
+      display: block;
+    }
+
+    #particles-js {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+    }
+
+    .btn-hero {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* --- bloco de estilos específicos da página (antes duplicado em outro <style> separado) --- */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--navy);
+      background: var(--bg);
+      -webkit-overflow-scrolling: touch;
+      padding-top: 90px; /* evita sobreposição do conteúdo pela navbar fixa */
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* NAV */
+    .navbar {
+      background: var(--navy);
+      color: var(--white);
+      padding: 12px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 80px 20px 40px 20px;
+      text-align: center;
+    }
+
+    
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+      font-size: 1.1rem;
+      color: #13305a;
+    }
+
+    .cta {
+      display: inline-block;
+      background: #0a2540;
+      color: #25d366;
+      padding: 14px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    /* CONTATO */
+    .contact {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .contact .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      color: #0a2540;
+    }
+
+    .contact p {
+      margin-bottom: 20px;
+      color: #13305a;
+    }
+
+    .form-contact {
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      gap: 16px;
+    }
+
+    .form-group {
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #0a2540;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .btn-contact {
+      background: #25d366;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .btn-contact:hover {
+      background: #1da955;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 25px 0;
+      margin-top: 60px;
+      background: #0a2540;
+      color: #ffffff;
+      text-align: center;
+      border-top: 2px solid #25d366;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    footer .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* WHATSAPP FIXO */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      padding: 12px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 50;
+    }
+
+    
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      .nav-links.show {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background: var(--blue);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="container">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="imagens/logo.png" alt="FMAInova" class="logo-img">
+        </a>
+      </div>
+
+      
+
+      <!-- Botão Hamburguer -->
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <!-- Navegação -->
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="nav-item">HOME</a></li>
+          <li><a href="#sobre" class="nav-item">SOBRE</a></li>
+          <li><a href="#servicos" class="nav-item">SERVIÇOS</a></li>
+          <li><a href="portfolio.html" class="nav-item nav-link">PORTFÓLIO</a></li>
+          <li><a href="#contato" class="nav-item btn">CONTATO</a></li>
+          <li>
+            <a href="https://www.instagram.com/fmainova/" target="_blank" class="nav-item instagram-link" aria-label="Instagram">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
+    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 
+    5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 
+    16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 
+    1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 
+    4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 
+    0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 
+    16.25 3.5h-8.5Zm8 1.75a.75.75 0 1 1 
+    0 1.5.75.75 0 0 1 0-1.5ZM12 
+    7a5 5 0 1 1 0 10 5 5 0 0 
+    1 0-10Zm0 1.5a3.5 3.5 0 1 0 
+    0 7 3.5 3.5 0 0 0 0-7Z"/>
+  </svg>
+</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+ <!-- HERO Desktop com vídeo -->
+<section class="hero hero-desktop">
+
+  <picture>
+   
+    <img src="imagens/banner.png" alt="Banner Principal" class="hero-banner">
+  </picture>
+
+  <!-- Camada de partículas -->
+  <div id="particles-js"></div>
+
+  <!-- Conteúdo sobre o vídeo -->
+  <div class="container">
+    <a href="#contato" class="btn-hero">Fale Conosco</a>
+  </div>
+
+</section>
+
+
+<!-- Script do particles.js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- Configuração das partículas (arquivo externo) -->
+<script src="script_formatado.js"></script>
+
+
+
+
+<!-- HERO Mobile -->
+<section class="hero hero-mobile">
+</section>
+
+<!-- SERVIÇOS -->
+
+
+<!-- =========================
+   CARDS DE SERVIÇOS
+========================= -->
+<section id="servicos" class="section">
+  <h2 class="section-title">Nossos Serviços</h2>
+
+  <div class="cards-column">
+
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon">
+          <!-- SVG Navegador -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 150 160">
+            <rect x="14" y="18" width="122" height="74" rx="6" fill="none" stroke="#0a2540" stroke-width="3"/>
+            <circle cx="28" cy="30" r="3" fill="#25d366"/>
+            <circle cx="40" cy="30" r="3" fill="#0a2540"/>
+            <rect x="26" y="44" width="98" height="18" rx="3" fill="#25d366" opacity="0.12"/>
+            <path d="M28 74 h94 v18 h-94 z" fill="#25d366" opacity="0.08" stroke="#0a2540" stroke-width="1"/>
+            <rect x="30" y="46" width="40" height="14" rx="2" fill="#25d366" />
+            <rect x="74" y="46" width="40" height="14" rx="2" fill="none" stroke="#0a2540" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="title">Web Design</div>
+      </div>
+      <div class="items">
+        <p>Transforme sua presença digital com <span style="color:#25d366;"><strong>websites profissionais</strong></span> desenvolvidos para destacar sua marca e gerar resultados. Cada projeto é planejado com foco em <strong>design moderno</strong>, <strong>experiência do usuário</strong>, <strong>responsividade</strong> e <strong>alta performance</strong>, garantindo uma navegação fluida em <strong>computadores</strong>, <strong>tablets</strong> e <strong>smartphones</strong>.</p>
+        <p>Criamos também <span style="color:#25d366;"><strong>portfólios personalizados e atraentes</strong></span>, proporcionando mais <strong>credibilidade</strong> e <strong>fortalecendo sua marca</strong>.</p>
+        <p>Além disso, aplicamos boas práticas de <strong>SEO</strong>, <strong>otimização de velocidade</strong> e <strong>usabilidade</strong>, desenvolvendo <strong>sites funcionais</strong>, <strong>seguros</strong> e preparados para atrair <strong>novos clientes</strong>, gerar <strong>oportunidades de negócio</strong> e impulsionar o crescimento da sua <strong>marca</strong>.</p>
+      </div>
+      <div class="card-cta">
+        <a href="#contato" class="btn">Saiba Mais</a>
+      </div>
+    </div>
+
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon">
+          <!-- SVG Laptop -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 150 160">
+            <rect x="18" y="34" width="114" height="64" rx="6" fill="none" stroke="#0a2540" stroke-width="3"/>
+            <rect x="28" y="46" width="94" height="36" rx="4" fill="#25d366" opacity="0.12"/>
+            <rect x="36" y="102" width="78" height="6" rx="3" fill="#0a2540"/>
+            <path d="M75 58 m0 -20 a20 20 0 0 1 20 20" fill="none" stroke="#25d366" stroke-width="3" stroke-linecap="round"/>
+            <path d="M75 58 m0 -12 a12 12 0 0 1 12 12" fill="none" stroke="#0a2540" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="75" cy="58" r="4" fill="#25d366"/>
+          </svg>
+        </div>
+        <div class="title">Acesso Remoto</div>
+      </div>
+      <div class="items">
+        <p>Suporte técnico <strong>remoto</strong> para <strong>solucionar problemas</strong> sem precisar de <strong>deslocamento</strong>.</p>
+        <p>Receba <span style="color:#25d366;"><strong>atendimento rápido e seguro</strong></span> diretamente no seu <strong>computador</strong> ou <strong>notebook</strong>. Nossos especialistas realizam <strong>diagnósticos</strong>, <strong>atualizações</strong>, <strong>remoção de vírus</strong>, <strong>configuração de softwares</strong> e <strong>orientações passo a passo</strong>, garantindo que seu equipamento volte a funcionar de forma <span style="color:#25d366;"><strong>eficiente</strong></span> sem complicações.</p>
+      </div>
+      <div class="card-cta">
+        <a href="#contato" class="btn">Saiba Mais</a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon">
+          <!-- SVG Monitor -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 150 160">
+            <rect x="18" y="18" width="114" height="72" rx="6" fill="none" stroke="#0a2540" stroke-width="3"/>
+            <rect x="36" y="36" width="78" height="34" rx="3" fill="#25d366" opacity="0.12"/>
+            <rect x="58" y="94" width="34" height="6" rx="2" fill="#0a2540"/>
+            <rect x="48" y="100" width="54" height="6" rx="2" fill="#0a2540"/>
+            <g transform="translate(108,32) scale(0.9)">
+              <circle cx="0" cy="0" r="8" fill="#25d366"/>
+              <path d="M-11 0 L-16 0 M0 -11 L0 -16 M11 0 L16 0 M0 11 L0 16" stroke="#0a2540" stroke-width="2" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </div>
+        <div class="title">Configuração de Desktop</div>
+      </div>
+      <div class="items">
+        <p><strong>Montagem e configuração de computadores personalizados</strong> para empresas e residências, com <strong>desempenho otimizado, estabilidade e segurança</strong>.</p>
+        <p>Cada máquina é planejada <strong>sob medida</strong>, do básico ao <strong>alto desempenho</strong>, incluindo <strong>hardware avançado e upgrades futuros</strong>.</p>
+        <p>Instalamos <strong>sistemas operacionais, drivers e softwares essenciais</strong>, oferecendo <strong>suporte completo</strong> e soluções para <strong>máxima produtividade</strong>.</p>
+      </div>
+      <div class="card-cta">
+        <a href="#contato" class="btn">Saiba Mais</a>
+      </div>
+    </div>
+
+        <!-- Card 4 -->
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon">
+          <!-- SVG Box -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 150 160">
+            <path d="M25 34 L75 16 L125 34 L75 52 Z" fill="#25d366" opacity="0.15" stroke="#0a2540" stroke-width="2"/>
+            <rect x="30" y="52" width="90" height="54" rx="6" fill="none" stroke="#0a2540" stroke-width="3"/>
+            <path d="M75 70 v24" stroke="#25d366" stroke-width="4" stroke-linecap="round"/>
+            <path d="M63 86 l12 12 l12-12" fill="none" stroke="#25d366" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="40" y="112" width="70" height="8" rx="4" fill="#0a2540" opacity="0.12"/>
+            <rect x="40" y="112" width="38" height="8" rx="4" fill="#25d366"/>
+          </svg>
+        </div>
+        <div class="title">Instalação de Software</div>
+      </div>
+      <div class="items">
+        <p>Oferecemos a <strong>instalação de softwares</strong> essenciais para <strong>escritórios</strong> ou <strong>residenciais</strong>, compatíveis com qualquer <strong>sistema operacional</strong>. Nosso serviço inclui <strong>configuração adequada</strong> de cada programa, <strong>otimização para desempenho máximo</strong> e verificação de <strong>atualizações</strong>.</p>
+        <p>Garantimos que seu <strong>computador</strong> ou <strong>notebook</strong> esteja pronto para uso imediato, com <strong>softwares de produtividade</strong>, <strong>antivírus confiáveis</strong>, <strong>ferramentas de comunicação</strong> e <strong>aplicações corporativas</strong> configuradas de forma <strong>segura</strong> e <strong>eficiente</strong>. Ideal tanto para <strong>uso pessoal</strong> quanto <strong>profissional</strong>, com suporte completo para garantir que tudo funcione de maneira <strong>estável</strong> e sem conflitos.</p>
+      </div>
+      <div class="card-cta">
+        <a href="#contato" class="btn">Saiba Mais</a>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon">
+          <!-- SVG Documento -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 150 160">
+            <rect x="22" y="18" width="86" height="112" rx="6" fill="none" stroke="#0a2540" stroke-width="3"/>
+            <path d="M46 34h34" stroke="#25d366" stroke-width="4" stroke-linecap="round"/>
+            <path d="M46 54h52" stroke="#25d366" stroke-width="4" stroke-linecap="round"/>
+            <path d="M46 74h30" stroke="#25d366" stroke-width="4" stroke-linecap="round"/>
+            <rect x="110" y="36" width="16" height="32" rx="4" fill="#25d366"/>
+            <path d="M122 68 v20" stroke="#0a2540" stroke-width="3" stroke-linecap="round"/>
+            <path d="M106 92 h32" stroke="#0a2540" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="title">Formatação</div>
+      </div>
+      <div class="items">
+        <p><strong>Recupere a performance</strong> do seu <span style="color:#25d366;"><strong>computador</strong></span> ou <span style="color:#25d366;"><strong>notebook</strong></span> com nosso <strong>serviço completo de formatação</strong>.</p>
+        <p>Realizamos a instalação do <strong>sistema operacional</strong> e dos <strong>programas essenciais</strong>, além de <span style="color:#25d366;"><strong>ajustes específicos</strong></span> para garantir que seu equipamento funcione no <strong>máximo desempenho</strong>. Seja para uso pessoal ou profissional, oferecemos uma <strong>configuração segura, rápida e eficiente</strong>, deixando seu dispositivo mais <span style="color:#25d366;"><strong>ágil</strong></span>, <span style="color:#25d366;"><strong>estável</strong></span> e pronto para todas as tarefas do dia a dia.</p>
+      </div>
+      <div class="card-cta">
+        <a href="#contato" class="btn">Saiba Mais</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+   
+
+<!-- SOBRE -->
+<section id="sobre" class="section-about">
+  <div class="container about-flex">
+
+    <!-- Coluna esquerda: Texto -->
+    <div class="about-text">
+      <h2>Sobre Nós</h2>
+      <p>
+        Com <strong>mais de 10 anos de experiência no setor de tecnologia</strong>, ao longo da minha trajetória, tive a oportunidade de trabalhar com grandes empresas, desenvolvendo estratégias e ferramentas que geraram resultados concretos, desde o aumento de vendas até a otimização de processos internos e presença digital.
+      </p>
+      <p>
+        Decidi compartilhar esse conhecimento acumulado e oferecer soluções completas que permitem que empresas de todos os tamanhos aproveitem ao máximo o potencial da internet. Nosso foco é entregar <strong>tecnologia aplicada de forma estratégica</strong>, garantindo que cada projeto seja eficiente, seguro e alinhado aos objetivos de negócio de nossos clientes.
+      </p>
+      <p>
+        Nosso compromisso é entregar soluções que unam <strong>praticidade, segurança e resultados</strong>, permitindo que você se concentre no crescimento do seu negócio enquanto nós cuidamos da tecnologia. Com a <strong>FMAInova</strong>, empresas e empreendedores têm acesso a conhecimento e inovação, tornando o digital um verdadeiro aliado para vendas, eficiência e reconhecimento de marca.
+      </p>
+    </div>
+
+    <!-- Coluna direita: Imagem -->
+    <div class="about-image">
+      <img src="imagens/sobre.png" alt="Equipe FMA Inova">
+    </div>
+
+  </div>
+</section>
+
+<!-- FALE CONOSCO -->
+<section id="contato" class="contact contact-portfolio">
+  <div class="container">
+    <h2 class="section-title">Fale Conosco</h2>
+    <p>Preencha o formulário abaixo e entraremos em contato o mais rápido possível.</p>
+    
+    <form class="form-contact">
+      
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" placeholder="Seu nome" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Assunto</label>
+        <select id="subject" name="subject" required>
+          <option value="" disabled selected>Selecione o assunto</option>
+          <option value="orcamento">Orçamento</option>
+          <option value="duvida">Dúvida</option>
+          <option value="suporte">Suporte</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="6" placeholder="Escreva sua mensagem..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-contact btn-portfolio">Enviar Mensagem</button>
+
+    </form>
+  </div>
+</section>
+
+
+<!-- QUADRO ACIMA DO FOOTER -->
+<section class="pre-footer">
+  <div class="container pre-footer-container">
+
+    <!-- Logo -->
+    <div class="footer-col logo-col">
+      <img src="imagens/logo.png" alt="FMAInova" class="footer-logo">
+    </div>
+
+    <!-- Entre em Contato -->
+    <div class="footer-col">
+      <h3>Entre em Contato</h3>
+      <p>
+        <!-- Ícone WhatsApp -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#25d366" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:8px;">
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.551 4.168 1.595 5.975L.057 24l6.207-1.497A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.817 0-3.588-.477-5.137-1.378l-.368-.214-3.684.889.786-3.598-.24-.374A9.732 9.732 0 012.25 12c0-5.383 4.367-9.75 9.75-9.75S21.75 6.617 21.75 12 17.383 21.75 12 21.75zm5.168-7.553c-.283-.141-1.674-.827-1.933-.921-.259-.096-.447-.141-.636.142s-.73.921-.895 1.11c-.165.188-.33.212-.613.07-.283-.141-1.195-.44-2.276-1.402-.841-.75-1.41-1.676-1.576-1.959-.165-.283-.018-.437.124-.578.127-.127.283-.33.424-.495.142-.165.189-.283.283-.472.094-.188.047-.353-.024-.495-.07-.141-.636-1.533-.872-2.096-.23-.554-.465-.479-.636-.488-.165-.008-.353-.01-.542-.01-.188 0-.495.071-.754.354-.259.283-.99.967-.99 2.359 0 1.391 1.012 2.731 1.154 2.919.142.188 1.993 3.037 4.827 4.257.676.292 1.204.467 1.616.598.678.216 1.294.185 1.781.112.543-.081 1.674-.683 1.91-1.34.236-.657.236-1.22.165-1.34-.07-.118-.259-.188-.542-.329z"/>
+        </svg>
+        WhatsApp: (27) 99951-3700
+      </p>
+      <p>
+        <!-- Ícone Email -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#25d366" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:8px;">
+          <path d="M12 13.065l-11.2-6.965h22.4l-11.2 6.965zm0 2.602l-12-7.465v12.798h24v-12.798l-12 7.465z"/>
+        </svg>
+        contato@fmainova.com
+      </p>
+    </div>
+
+    <!-- Institucional -->
+    <div class="footer-col">
+      <h3>Institucional</h3>
+      <ul>
+        <li><a href="#sobre">SOBRE</a></li>
+        <li><a href="#servicos">SERVIÇOS</a></li>
+        <li><a href="portfolio.html">PORTFÓLIO</a></li>
+        <li><a href="#contato">CONTATO</a></li>
+      </ul>
+    </div>
+
+    <!-- Endereço -->
+    <div class="footer-col">
+      <h3>Endereço</h3>
+      <p>
+        <!-- Ícone localização -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#25d366" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:8px;">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12 11.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/>
+        </svg>
+        Av.Getulio Vargas, 20 - Colatina/ES
+      </p>
+      <p>
+        <!-- Ícone mundo -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#25d366" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:8px;">
+          <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 
+          10-4.486 10-10S17.514 2 12 2zm7.938 9h-3.088a15.816 15.816 0 00-1.219-5.113A8.027 8.027 0 0119.938 11zM12 4c.813 0 
+          2.566 2.246 3.342 6H8.658C9.434 6.246 11.187 4 12 4zM4.062 11h3.088c.231-1.78.688-3.45 1.219-5.113A8.027 8.027 0 004.062 11zm0 
+          2a8.027 8.027 0 004.307 5.113A15.816 15.816 0 017.15 13H4.062zM12 20c-.813 0-2.566-2.246-3.342-6h6.684C14.566 17.754 
+          12.813 20 12 20zm3.781-1.887A8.027 8.027 0 0019.938 13h-3.088c-.231 1.78-.688 3.45-1.219 5.113z"/>
+        </svg>
+        www.fmainova.com.br
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 FMAInova - Todos os direitos reservados.</p>
+</footer>
+
+  <!-- WHATSAPP FIXO -->
+  <a href="https://wa.me/5527999513700" class="whatsapp-btn" target="_blank" aria-label="Fale conosco no WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#ffffff">
+      <path d="M20.52 3.48A11.924 11.924 0 0012 
+      0C5.37 0 0 5.37 0 12c0 2.11.55 4.09 
+      1.58 5.83L0 24l6.45-1.64A11.923 11.923 
+      0 0012 24c6.63 0 12-5.37 
+      12-12 0-3.2-1.25-6.2-3.48-8.52zM12 
+      21.48c-1.97 0-3.88-.53-5.52-1.53l-.39-.24-3.83.97.99-3.74-.26-.4A9.934 
+      9.934 0 012 12c0-5.52 4.48-10 
+      10-10 2.66 0 5.17 1.04 7.07 
+      2.93A9.936 9.936 0 0122 12c0 
+      5.52-4.48 10-10 10zm5.35-7.3c-.29-.14-1.71-.84-1.97-.93-.26-.09-.45-.14-.64.14-.19.29-.74.93-.91 
+      1.12-.17.19-.34.21-.63.07-.29-.14-1.23-.45-2.34-1.44-.87-.77-1.46-1.72-1.63-2.01-.17-.29-.02-.45.12-.59.12-.12.26-.31.39-.47.13-.16.17-.28.26-.46.09-.19.05-.35-.02-.49-.07-.14-.64-1.54-.88-2.11-.23-.56-.46-.49-.64-.5-.17-.01-.37-.01-.57-.01-.19 
+      0-.49.07-.75.35s-.98.96-.98 
+      2.34c0 1.38 1 2.72 1.14 
+      2.91.14.19 1.97 3.01 4.77 
+      4.22.67.29 1.19.46 1.6.59.67.22 
+      1.28.19 1.76.12.54-.08 1.71-.7 
+      1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.33z"/>
+    </svg>
+  </a>
+
+  <!-- SCROLL SUAVE PROTEGIDO -->
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (!target) return;
+
+    e.preventDefault();
+
+    const offset = 90;
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
+</script>
+
+<!-- FIX CRÍTICO: EVITA REFLOW DOS CARDS -->
+
+
+
+  <!-- SCRIPT -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+<script>
+window.addEventListener('load', function() {
+  const cards = document.querySelectorAll('.cards-wrap .card');
+  let maxHeight = 0;
+
+  cards.forEach(card => {
+    card.style.height = 'auto'; // reseta a altura
+    if (card.offsetHeight > maxHeight) {
+      maxHeight = card.offsetHeight;
+    }
+  });
+
+  cards.forEach(card => {
+    card.style.height = maxHeight + 'px'; // aplica altura máxima
+  });
+});
+</script>
+
+
+
+<a href="#top" class="scroll-top">
+  <!-- Seta para cima em SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="12" y1="19" x2="12" y2="5"></line>
+    <polyline points="5 12 12 5 19 12"></polyline>
+  </svg>
+</a>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"FMAInova",
+  "url":"https://fmaarpini.github.io/fmainova/",
+  "logo":"https://fmaarpini.github.io/fmainova/logo.png",
+  "description":"Empresa especializada em soluções de tecnologia, suporte técnico, acesso remoto, instalação de softwares, manutenção de computadores e criação de landing pages.",
+  "telephone":"+55-27-99951-3700",
+  "address":{
+      "@type":"PostalAddress",
+      "addressCountry":"BR"
+  },
+  "sameAs":[
+      "https://www.instagram.com/fmainova"
+  ]
+}
+</script>
+
+
+</body>
+</html>
