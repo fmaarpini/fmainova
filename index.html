@@ -9,14 +9,6 @@
   <meta name="author" content="FMAInova">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fmaarpini.github.io/fmainova/">
-
-    <!-- Travar scroll restore (CORREÇÃO PRINCIPAL) -->
-  <script>
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
-  </script>
-
   <!-- Favicons e PWA -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -105,126 +97,9 @@
       position: relative;
       z-index: 2;
     }
-  </style>
 
-</head>
-<body>
+    /* --- bloco de estilos específicos da página (antes duplicado em outro <style> separado) --- */
 
-  <!-- HEADER -->
-  <header class="navbar">
-    <div class="container">
-      <!-- Logo -->
-      <div class="logo">
-        <a href="index.html">
-          <img src="imagens/logo.png" alt="FMAInova" class="logo-img">
-        </a>
-      </div>
-
-      
-
-      <!-- Botão Hamburguer -->
-      <div class="menu-toggle" id="menu-toggle">☰</div>
-
-      <!-- Navegação -->
-      <nav>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html" class="nav-item">HOME</a></li>
-          <li><a href="#sobre" class="nav-item">SOBRE</a></li>
-          <li><a href="#servicos" class="nav-item">SERVIÇOS</a></li>
-          <li><a href="portfolio.html" class="nav-item nav-link">PORTFÓLIO</a></li>
-          <li><a href="#contato" class="nav-item btn">CONTATO</a></li>
-          <li>
-            <a href="https://www.instagram.com/fmainova/" target="_blank" class="nav-item instagram-link" aria-label="Instagram">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
-    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 
-    5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 
-    16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 
-    1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 
-    4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 
-    0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 
-    16.25 3.5h-8.5Zm8 1.75a.75.75 0 1 1 
-    0 1.5.75.75 0 0 1 0-1.5ZM12 
-    7a5 5 0 1 1 0 10 5 5 0 0 
-    1 0-10Zm0 1.5a3.5 3.5 0 1 0 
-    0 7 3.5 3.5 0 0 0 0-7Z"/>
-  </svg>
-</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-
-
- <!-- HERO Desktop com vídeo -->
-<section class="hero hero-desktop">
-
-  <picture>
-   
-    <img src="imagens/banner.png" alt="Banner Principal" class="hero-banner">
-  </picture>
-
-  <!-- Camada de partículas -->
-  <div id="particles-js"></div>
-
-  <!-- Conteúdo sobre o vídeo -->
-  <div class="container">
-    <a href="#contato" class="btn-hero">Fale Conosco</a>
-  </div>
-
-</section>
-
-
-<!-- Script do particles.js -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-<!-- Configuração das partículas -->
-<script>
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 80,
-      "density": {
-        "enable": true,
-        "value_area": 800
-      }
-    },
-    "color": { "value": "#25d366" },
-    "shape": { "type": "circle" },
-    "opacity": { "value": 0.5 },
-    "size": { "value": 3, "random": true },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#ffffff",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 3,
-      "out_mode": "out"
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": { "enable": true, "mode": "grab" },
-      "onclick": { "enable": true, "mode": "push" },
-      "resize": true
-    },
-    "modes": {
-      "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
-      "push": { "particles_nb": 4 }
-    }
-  },
-  "retina_detect": true
-});
-</script>
-
-
-<style>
     * {
       margin: 0;
       padding: 0;
@@ -451,17 +326,89 @@ particlesJS("particles-js", {
     }
   </style>
 
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="container">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="imagens/logo.png" alt="FMAInova" class="logo-img">
+        </a>
+      </div>
+
+      
+
+      <!-- Botão Hamburguer -->
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <!-- Navegação -->
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="nav-item">HOME</a></li>
+          <li><a href="#sobre" class="nav-item">SOBRE</a></li>
+          <li><a href="#servicos" class="nav-item">SERVIÇOS</a></li>
+          <li><a href="portfolio.html" class="nav-item nav-link">PORTFÓLIO</a></li>
+          <li><a href="#contato" class="nav-item btn">CONTATO</a></li>
+          <li>
+            <a href="https://www.instagram.com/fmainova/" target="_blank" class="nav-item instagram-link" aria-label="Instagram">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
+    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 
+    5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 
+    16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 
+    1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 
+    4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 
+    0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 
+    16.25 3.5h-8.5Zm8 1.75a.75.75 0 1 1 
+    0 1.5.75.75 0 0 1 0-1.5ZM12 
+    7a5 5 0 1 1 0 10 5 5 0 0 
+    1 0-10Zm0 1.5a3.5 3.5 0 1 0 
+    0 7 3.5 3.5 0 0 0 0-7Z"/>
+  </svg>
+</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+ <!-- HERO Desktop com vídeo -->
+<section class="hero hero-desktop">
+
+  <picture>
+   
+    <img src="imagens/banner.png" alt="Banner Principal" class="hero-banner">
+  </picture>
+
+  <!-- Camada de partículas -->
+  <div id="particles-js"></div>
+
+  <!-- Conteúdo sobre o vídeo -->
+  <div class="container">
+    <a href="#contato" class="btn-hero">Fale Conosco</a>
+  </div>
+
+</section>
+
+
+<!-- Script do particles.js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- Configuração das partículas (arquivo externo) -->
+<script src="script_formatado.js"></script>
+
+
+
 
 <!-- HERO Mobile -->
 <section class="hero hero-mobile">
-  <div class="">
-    <a href="" class=""></a>
-  </div>
 </section>
 
-  
-
-  <!-- SERVIÇOS -->
+<!-- SERVIÇOS -->
 
 
 <!-- =========================
@@ -770,26 +717,6 @@ particlesJS("particles-js", {
     </svg>
   </a>
 
-   <!-- PARTICLES -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-  <script>
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 60 },
-        color: { value: "#25d366" },
-        size: { value: 3 },
-        move: { speed: 2 },
-        line_linked: {
-          enable: true,
-          distance: 140,
-          color: "#ffffff",
-          opacity: 0.3
-        }
-      }
-    });
-  </script>
-
   <!-- SCROLL SUAVE PROTEGIDO -->
 <script>
 document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -808,23 +735,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 </script>
 
 <!-- FIX CRÍTICO: EVITA REFLOW DOS CARDS -->
-<script>
-window.addEventListener('load', function () {
-  const cards = document.querySelectorAll('.card');
-  if (!cards.length) return;
 
-  let maxHeight = 0;
-
-  cards.forEach(card => {
-    card.style.height = 'auto';
-    maxHeight = Math.max(maxHeight, card.offsetHeight);
-  });
-
-  cards.forEach(card => {
-    card.style.height = maxHeight + 'px';
-  });
-});
-</script>
 
 
   <!-- SCRIPT -->
@@ -854,24 +765,6 @@ window.addEventListener('load', function() {
 });
 </script>
 
-
-
-<script>
-  // Seleciona todos os links internos
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      const offset = 70; // ajuste conforme altura do seu menu fixo
-      const topPosition = target.getBoundingClientRect().top + window.scrollY - offset;
-      
-      window.scrollTo({
-        top: topPosition,
-        behavior: 'smooth' // mantém rolagem suave
-      });
-    });
-  });
-</script>
 
 
 <a href="#top" class="scroll-top">

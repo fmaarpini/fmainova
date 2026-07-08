@@ -1,4 +1,4 @@
-particlesJS("hero", {
+particlesJS("particles-js", {
   "particles": {
     "number": {
       "value": 20, // poucos pontos
