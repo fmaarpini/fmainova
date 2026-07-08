@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://fmaarpini.github.io/fmainova/sitemap.xml
